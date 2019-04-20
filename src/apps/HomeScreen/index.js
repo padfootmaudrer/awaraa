@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {StyleSheet, View, FlatList, Text} from 'react-native';
+import TripList from '../../components/TripList.js';
 
+const BanjaraLogo = require('../../../assets/banjara_logo.png');
 export default class HomeScreen extends Component {
   
   constructor(props){
@@ -8,23 +10,19 @@ export default class HomeScreen extends Component {
   }
 
   render(){
+
+    var tripList = [
+      {tripImage:BanjaraLogo,tripTitle:"Press Me"},
+      {tripImage:BanjaraLogo,tripTitle:"Press Me pls"},
+      {tripImage:BanjaraLogo,tripTitle:"Press Me pls"},
+      {tripImage:BanjaraLogo,tripTitle:"Press Me pls"},
+      {tripImage:BanjaraLogo,tripTitle:"Press Me pls"},
+      {tripImage:BanjaraLogo,tripTitle:"Press Me pls"}
+    ];
+
     return(
       <View style={styles.container}>
-        <View style={styles.listContainer}>
-          <FlatList
-            data={[
-              {key: 'Devin'},
-              {key: 'Jackson'},
-              {key: 'James'},
-              {key: 'Joel'},
-              {key: 'John'},
-              {key: 'Jillian'},
-              {key: 'Jimmy'},
-              {key: 'Julie'},
-            ]}
-            renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
-          />
-        </View>
+        <TripList tripList={tripList}/>
       </View>
     );
   }
@@ -43,8 +41,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     padding:10,
-    // borderRadius: 2,
-    // borderWidth: 5,
-    // borderColor: '#000000',
   }
 });

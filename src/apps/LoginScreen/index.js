@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, TouchableHighlight, Text, Button, Image} from 'react-native';
+import {StyleSheet, View, Button, Image} from 'react-native';
+import TripCard from '../../components/TripCard.js';
 
 const BanjaraLogo = require('../../../assets/banjara_logo.png');
 
@@ -16,15 +17,7 @@ export default class LoginScreen extends Component {
   render(){
     return(
       <View style={styles.container}>
-        {/* <Button title="Skip" onPress={() => this.handleSkipPress()}/> */}
-        <View style={styles.cardContainer}>
-          <View style={styles.tripCard}>
-            <Image source={BanjaraLogo} style={styles.tripCard}></Image>
-          </View>
-          <View style={styles.cardButtonView}>
-            <Button color="black" title="Press Me"/>
-          </View>
-        </View>
+        <Button title="Skip" onPress={() => this.handleSkipPress()}/>
       </View>
     );
   }
@@ -38,22 +31,5 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
     justifyContent: 'center',
     padding:16
-  },
-  cardContainer: {
-    flex: 1,
-    // justifyContent: 'flex-start',
-    alignItems: 'center',
-    borderRadius: 2,
-    borderWidth: 1,
-    borderColor: '#000000',
-  },
-  tripCard: {
-    height: 120,
-    width: 326,
-    alignItems: 'center',
-  },
-  cardButtonView: {
-    // height: 40,
-    width: 360,
   }
 });
