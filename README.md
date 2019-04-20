@@ -19,3 +19,5 @@ These instructions will get you a copy of the app and running on your local mach
 - *`npm i -g exp`* Install Expo if you haven't already
 - *`npm install`* Install dependencies
 - *`expo start`* Build Expo project & Run the bundler
+- Download expo client on your [iOS](https://itunes.apple.com/us/app/expo-client/id982107779?mt=8)/[Android Device](https://play.google.com/store/apps/details?id=host.exp.exponent)
+- Open expo client on your device and scan QR to run the app.
