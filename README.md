@@ -1,6 +1,6 @@
-# A basic e-commerce app with React Native
+# Banjara - Travel App
 
-A very small ecommerce application focussing on fundamentals of React Native. The app consists of a landing page with search textInput, a product list page & a product display page (PDP). 
+Banjara app has been developed to formulate an ecosystem of Travellers who wish to interact with other fellow travellers.
 
 ## Prerequisites
 
