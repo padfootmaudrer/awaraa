@@ -1,13 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Toolbar } from '../components/Toolbar';
-import { NotificationCard } from '../components/NotificationCard';
+import { NotificationList } from '../components/NotificationList';
 
 export default function NotificationsScreen() {
 
-  onSettingsOptionClicked = (settingId) => {console.log("Selected Notifivation ",settingId)}
+  onNotificationClicked = (notificationId) => {console.log("Selected Notification ",notificationId)}
 
-  var settingsList = [
+  var notificationList = [
     {id:'1',heading:'Hi this is your dummy notificationsfications',subHeading:'ios-notifications-outline',timestamp:'md-notifications-outline'},
     {id:'2',heading:'Hi this is your dummy notificationsral',subHeading:'ios-settings',timestamp:'md-settings'},
     {id:'3',heading:'Hi this is your dummy notificationsunt',subHeading:'ios-person',timestamp:'md-person'},
@@ -18,7 +18,7 @@ export default function NotificationsScreen() {
 
   return (
     <View style={styles.container}>
-      <NotificationCard settingsList={settingsList}/>
+      <NotificationList notificationList={notificationList} onNotificationClicked={onNotificationClicked} />
     </View>
   );
 }

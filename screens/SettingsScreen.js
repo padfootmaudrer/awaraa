@@ -18,7 +18,7 @@ export default function SettingsScreen() {
 
   return (
     <View style={styles.container}>
-      <SettingsList settingsList={settingsList}/>
+      <SettingsList settingsList={settingsList} onSettingChosen={onSettingsOptionClicked}/>
     </View>
   );
 }

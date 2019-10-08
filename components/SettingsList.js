@@ -3,7 +3,10 @@ import { FlatList, View} from 'react-native';
 import { SettingsTab } from './SettingsTab'
 
 export function SettingsList(props) {  
-  onSettingChosen = (settingsId) => {console.log("Selected setting ",settingsId)}
+  
+  onSettingChosen = (settingsId) => {
+    props.onSettingChosen(settingsId);
+  }
 
   var listData = [];
   props.settingsList.map((setting)=>{
